@@ -1,6 +1,9 @@
 package request
 
-import "encoding/json"
+import (
+	"encoding/json"
+	"fmt"
+)
 
 // Request represents the data of an incoming request.
 type Request struct {
@@ -15,4 +18,12 @@ func RequestFromJSON(data []byte) (Request, error) {
 	}
 
 	return req, nil
+}
+
+func (req *Request) process() error {
+	return nil
+}
+
+func (r *Request) String() string {
+	return fmt.Sprintf("%#v", r)
 }
