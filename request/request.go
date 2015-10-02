@@ -20,7 +20,7 @@ func RequestFromJSON(data []byte) (Request, error) {
 	return req, nil
 }
 
-func (req *Request) process() error {
+func (r *Request) process() error {
 	return nil
 }
 
